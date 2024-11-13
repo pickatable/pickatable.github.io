@@ -1,0 +1,1224 @@
+@font-face {
+    font-family: "Puffin";
+    font-weight: bold;
+    src: url('Font/Puffin-Display-SoftBlk.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+
+
+
+}
+
+/* body {
+    font-family: 'Puffin Display Soft Blk', sans-serif;
+} */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    /* Other styles for the container */
+}
+
+
+
+
+
+
+.site-header {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hamburger-icon {
+    font-size: 20px;
+    /* Adjust the size as needed */
+    cursor: pointer;
+    display: none;
+    /* Initially hide the hamburger icon */
+}
+
+.button-container {
+    /* Set a max-width and position to keep it within the 1140px limit */
+    max-width: calc(100% - 200px);
+    /* Adjust the value to leave space for buttons */
+    display: flex;
+    justify-content: flex-end;
+    /* Other styles for the button container */
+}
+
+.header-container {
+
+    z-index: 3;
+    background-color: white;
+    border-bottom: solid 1px #dbdbdb;
+
+    /* Other styles for the header container */
+}
+
+
+
+img.svg {
+    width: 120px;
+    /* Set the desired width */
+    height: auto;
+    /* Allow the height to adjust proportionally */
+    padding-top: 7px;
+}
+
+.header-button {
+    font-family: 'Poppins', sans-serif;
+    /* Apply Poppins font */
+    font-weight: 600;
+    /* Extra bold */
+    font-size: 14px;
+    /* Adjust font size */
+    color: #365880;
+    /* Text color */
+    background-color: #ffffff;
+    /* Background color */
+    border: none;
+    /* Remove border */
+    padding: 10px 20px;
+    /* Adjust padding */
+    text-decoration: none;
+    /* Remove default underline */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    transition: all 0.3s ease;
+
+    /* Smooth transition */
+}
+
+
+.store {
+    margin: 10px 0;
+    height: 35px;
+    padding-left: 30px;
+    display: inline-block;
+    margin-left: 0px;
+
+    justify-content: center;
+}
+
+.badge {
+    height: 35px;
+    margin-left: 0px;
+    margin-right: 8px;
+    justify-content: center;
+
+}
+
+
+
+.header-button:active {
+    transform: translateY(3px);
+    /* Move the button slightly down on click */
+    /* You can apply other styles/animations as desired */
+}
+
+.header-button:hover {
+    color: #5387C4;
+
+
+    /* Underline on hover */
+    /* Additional styles on hover if needed */
+}
+
+.header-button:nth-child(4) {
+    background-color: #fff;
+    color: #ff4331;
+    border-radius: 5px;
+    /* Apply styles specifically to the fourth button (Restaurant Owner) */
+    /* Adjust styles such as color, background, padding, etc. */
+}
+
+.header-button:nth-child(4):hover {
+    /* Other styles for hover effect */
+    text-decoration: none;
+    /* Remove default underline */
+    background-color: #365880;
+    color: #fff;
+
+}
+
+
+
+
+.main-content {
+    position: relative;
+
+    height: 640px;
+    overflow: hidden;
+
+}
+
+/* Scrolling Logos */
+
+
+.logos-container {
+    /*  border-top: solid #dbdbdb 1px; */
+    background-color: #365880;
+    padding: 10px;
+    margin: 0;
+    height: 250;
+    display: block;
+}
+
+.scrolling-logos {
+    height: auto;
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: #365880;
+
+
+
+}
+
+/* Ensure it's on top of the background */
+
+
+
+
+.scrolling-logos img {
+
+    max-width: 100%;
+    height: 35px;
+
+    margin-right: 20px;
+    margin-left: 20px;
+    margin: 30px;
+    display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Set the image as a background for main-content */
+.background-image {
+    position: relative;
+    background-image: url('img_1.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Text color */
+    /* Other styles for the background image */
+}
+
+.background-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    /* Adjust the gradient colors and transparency as needed */
+    z-index: 1;
+    /* Ensure it's on top of the background image */
+}
+
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    /* Center align the content */
+    /* Other styles for content overlay */
+}
+
+
+.right-content {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    /* Align text to the left */
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+
+}
+
+.right-content img {
+    height: 100px;
+    max-width: 100%;
+    /* Ensures the image won't exceed the container width */
+    height: auto;
+    /* Allows the height to adjust proportionally */
+    width: 100%;
+
+}
+
+
+
+
+.content-overlay h1 {
+    font-size: 2.5rem;
+    letter-spacing: -1.68px;
+
+
+    /* Other styles for the heading */
+}
+
+.content-overlay p {
+    font-size: 1.2rem;
+    /* Other styles for the paragraph */
+}
+
+
+
+.content-overlay h1,
+.content-overlay p {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+
+.content-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.left-content {
+    text-align: left;
+}
+
+
+
+
+.left-content h1 {
+    margin-bottom: 10px;
+    /* Add margin as needed */
+}
+
+
+
+
+.additional-section .additional-content-wrapper {
+
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* Align text to the left */
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.additional-section-faqs .additional-content-wrapper-faqs {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    /* Align text to the left */
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.additional-content-wrapper p
+
+/* .puffin-font */
+    {
+    font-family: puffin, sans-serif;
+    font-weight: 900;
+    color: #365880;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    display: inline-block;
+    /* Ensures inline alignment with the surrounding text */
+    vertical-align: middle;
+
+}
+
+.additional-content-wrapper-faqs p
+
+/* .puffin-font */
+    {
+    font-family: puffin, sans-serif;
+    font-weight: 900;
+    color: #365880;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    display: inline-block;
+    /* Ensures inline alignment with the surrounding text */
+    vertical-align: middle;
+    padding: 0px;
+
+}
+
+
+.additional-section {
+    background-color: #ffffff;
+    padding: 40px;
+    height: auto;
+    /*  border-top: solid #dbdbdb 1px; */
+    /* Other styles for the additional section */
+}
+
+
+
+.additional-section h2 {
+
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #365880;
+    letter-spacing: -0.7px;
+    margin: 0px;
+    line-height: 1.2;
+    font-weight: 700;
+    display: inline-block;
+    overflow-wrap: break-word;
+
+    /* Other styles for headings in this section */
+}
+
+.additional-content-wrapper p,
+.additional-content-wrapper h2 {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.2;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50;
+}
+
+.additional-section h2,
+.additional-section p {
+    letter-spacing: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 30px;
+    display: inline-block;
+    overflow-wrap: break-word;
+
+
+
+    /* Reset margin for better alignment */
+}
+
+.additional-section p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 400;
+    display: block;
+
+    /* Regular weight */
+    color: #365880;
+    /* Other styles for paragraphs in this section */
+}
+
+.additional-left-content {
+
+    width: 50%;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* Add other styles as needed */
+}
+
+.additional-left-content img {
+    max-width: auto;
+    /* Ensures the image won't exceed the container width */
+    height: auto;
+    /* Allows the height to adjust proportionally */
+    width: 100%;
+}
+
+.additional-right-content {
+    width: 50%;
+
+
+
+    /* Adjust the width as needed */
+}
+
+
+
+.additional-right-content
+
+/* .puffin-font */
+    {
+    font-family: puffin, sans-serif;
+    font-weight: 700;
+    color: #365880;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    display: block;
+    /* Ensures inline alignment with the surrounding text */
+
+}
+
+.additional-right-content-faqs
+
+/* .puffin-font */
+    {
+    font-family: puffin, sans-serif;
+
+    color: #365880;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    display: inline-block;
+    /* Ensures inline alignment with the surrounding text */
+    vertical-align: middle;
+}
+
+
+.additional-right-content p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #365880;
+    padding: 0px;
+    /* Other styles for paragraphs in this section */
+}
+
+.additional-content-wrapper p,
+.additional-content-wrapper
+
+/* .puffin-font */
+    {
+    display: block;
+}
+
+.additional-right-content img {
+    max-width: 200px;
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 80px 60px;
+
+    /* Added this line to add space between text and image */
+}
+
+.additional-right-content h2 {
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    display: inline-block;
+    padding: 0px;
+
+}
+
+
+.additional-content-wrapper-faqs {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    /* Align text to the left */
+    line-height: 1.4;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.site-footer {
+
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Adjust padding as needed */
+    background-color: #365880;
+    /* Match the background color of other sections */
+    display: block;
+}
+
+.site-footer img {
+    height: 300px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center-align items horizontally */
+    justify-content: center;
+    height: 350px;
+    /*  border-top: solid #dbdbdb 1px; */
+    background-color: #365880;
+}
+
+
+.follow-us {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #365880;
+    /* Text color for "Follow Us" text */
+    font-size: 1rem;
+    /* Adjust font size */
+}
+
+.follow-us img {
+    height: 20px;
+    margin-right: 10px;
+    /* Adjust spacing between Instagram logo and text */
+}
+
+.follow-us p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+
+.follow-us a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.copyright p {
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+
+
+
+
+.mobile-order {
+    flex-direction: column-reverse;
+    /* Reverse the order for mobile screens */
+}
+
+.background-image-faqs {
+
+
+
+
+    color: rgb(255, 255, 255);
+    background-color: #365880;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.puffin-font {
+    font-family: puffin, sans-serif;
+    font-weight: 900;
+}
+
+
+
+/* h2 .puffin-font {
+    display: inline-block;
+    
+}
+
+.puffin-font {
+    font-family: 'Puffin Display Soft', sans-serif;
+    font-weight: 900;
+
+    
+} */
+
+
+.additional-right-content-faqs h2 {
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    display: flex;
+}
+
+.additional-right-content-faqs {
+    width: 100%;
+
+
+
+    /* Adjust the width as needed */
+}
+
+
+
+.additional-right-content-faqs p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #365880;
+    padding: 0px;
+    /* Other styles for paragraphs in this section */
+}
+
+.additional-section-faqs h2 {
+
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #365880;
+    letter-spacing: -0.7px;
+    margin: 0px;
+    line-height: 1.2;
+    font-weight: 700;
+    display: inline-block;
+
+    /* Other styles for headings in this section */
+}
+
+.additional-section-faqs h2,
+.additional-section-faqs p {
+    letter-spacing: -0.7px;
+
+    margin: 30px;
+    display: inline-block;
+
+
+
+    /* Reset margin for better alignment */
+}
+
+.additional-section-faqs p {
+    margin-top: 0px;
+}
+
+.additional-left-content-faqs img {
+
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    /* Ensure the image takes up the full width of its container */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+    max-height: 100vh;
+
+    /* Limit the height to 100% of the viewport height */
+}
+
+.puffin-font {
+    font-family: puffin, sans-serif;
+    /* Use the correct font name */
+    font-size: inherit;
+    /* Inherit the font size from the parent */
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: absolute;
+}
+
+/* .logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+} */
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #365880);
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #365880);
+}
+
+/* .logos:hover .logos-slide {
+    animation-play-state: paused;
+  } */
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+}
+
+/* Add similar styles for main content and footer */
+@media only screen and (max-width: 768px) {
+
+
+
+
+    .header-container {
+
+        z-index: 3;
+        background-color: rgb(255, 255, 255);
+        border-bottom: solid 1px #dbdbdb;
+
+        /* Other styles for the header container */
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        /* Centers the container horizontally */
+        /* Other styles for the container */
+    }
+
+    .site-header {
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #5388c400;
+    }
+
+    .button-container.show {
+        display: flex;
+        max-width: 100%;
+        padding-right: 15px;
+
+    }
+
+    .button-container {
+        max-width: 100%;
+        position: relative;
+    }
+
+    .header-button {
+        border-radius: 5px;
+
+    }
+
+    .header-button:nth-child(2) {
+        margin-top: 5px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        color: #365880;
+        margin: 0px;
+        cursor: pointer;
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #365880;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ff0000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        margin: 5px;
+        padding: 5px;
+        /* Set the width as needed */
+        border-radius: 10px;
+        /* Add this line for rounded corners */
+        z-index: 5;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+        text-align: center;
+        color: #365880;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #ff0000;
+        /* Add a background color on hover */
+    }
+
+    .dropdown-menu.visible {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        /* Adjust the top position as needed */
+        right: 0px;
+        background-color: #ff0000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        border-radius: 5px;
+        /* Set the width as needed */
+    }
+
+
+
+
+    /* Adjust other styles as needed for smaller screens */
+
+    .background-image {
+        background-size: cover;
+    }
+
+    .main-content {
+        height: 100vh;
+    }
+
+    .scrolling-logos img {
+        height: 25px;
+        /* Adjust the logo height for smaller screens */
+        margin: 10px;
+    }
+
+    .additional-section {
+        height: auto;
+    }
+
+    .additional-content-wrapper p,
+    .additional-content-wrapper
+
+    /* .puffin-font */
+        {
+        display: block;
+    }
+
+    .additional-left-content,
+    .additional-right-content {
+        width: 100%;
+    }
+
+    .site-footer {
+
+
+        margin: 0 auto;
+        padding: 0px;
+        /* Adjust padding as needed */
+        background-color: #365880;
+        /* Match the background color of other sections */
+        display: block;
+    }
+
+    .footer-container {
+        height: auto;
+    }
+
+    .follow-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .follow-us img {
+        margin-bottom: 10px;
+    }
+
+    .additional-section {
+        background-color: #ffffff;
+        padding: 0px;
+        margin-top: 30px;
+        height: auto;
+        /*  border-top: solid #dbdbdb 1px; */
+        /* Other styles for the additional section */
+    }
+
+    .additional-section,
+    .logos-container {
+        order: 1;
+        /* Set the order for mobile screens */
+    }
+
+    .mobile-order {
+        flex-direction: column-reverse;
+        /* Reverse the order for mobile screens */
+    }
+
+    .additional-section,
+    .logos-container {
+        order: 1;
+        /* Set the order for mobile screens */
+    }
+
+    .additional-content-wrapper {
+        flex-direction: column-reverse;
+        /* Change flex direction to column-reverse for mobile screens */
+    }
+
+    .additional-left-content,
+    .additional-right-content {
+        max-width: auto;
+
+        /* Set both components to full width in mobile */
+    }
+
+    .additional-content-wrapper-faqs {
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: left;
+        /* Align text to the left */
+        line-height: 1.4;
+
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+
+
+
+    .additional-left-content {
+
+        width: 100%;
+        /* Set the width to 100% */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        /* Center the content vertically and horizontally */
+
+    }
+
+    .additional-left-content img {
+
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        /* Ensure the image takes up the full width of its container */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the container */
+        max-height: 100vh;
+
+        /* Limit the height to 100% of the viewport height */
+    }
+
+    .additional-left-content-faqs {
+
+        width: 100%;
+        /* Set the width to 100% */
+
+        align-items: center;
+        justify-content: center;
+        /* Center the content vertically and horizontally */
+
+    }
+
+    .additional-left-content-faqs img {
+
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        /* Ensure the image takes up the full width of its container */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the container */
+        max-height: 100vh;
+
+        /* Limit the height to 100% of the viewport height */
+    }
+
+    .additional-section p,
+    .additional-section .puffin-font {
+        text-align: left;
+        /* Center-align text */
+    }
+
+    .additional-section h2,
+    .additional-section p {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 40px;
+
+
+        /* Reset margin for better alignment */
+    }
+
+    .additional-section-faqs h2,
+    .additional-section-faqs p {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 40px;
+
+
+        /* Reset margin for better alignment */
+    }
+
+    .logos-container .scrolling-logos {
+        margin-top: 0px;
+        flex-direction: column;
+        /* Display logos in a column for mobile screens */
+        align-items: center;
+        /* Center-align logos */
+    }
+
+    .logos-container .scrolling-logos img {
+        max-width: 100%;
+        /* Ensure the logo won't exceed its container width */
+        height: auto;
+        width: 125px;
+        /* Allow the height to adjust proportionally */
+        margin: 20px 0;
+        /* Add some space between logos */
+    }
+
+    .logos-container {
+        padding-top: 40px;
+        border: 0px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center-align items horizontally */
+        justify-content: center;
+        height: 200px;
+        /*  border-top: solid #dbdbdb 1px; */
+        background-color: #365880;
+        border: 0px;
+    }
+
+    .additional-left-content-faqs {
+
+        width: 100%;
+        /* Add other styles as needed */
+    }
+
+    .additional-right-content-faqs {
+        width: 100%;
+
+
+
+        /* Adjust the width as needed */
+    }
+
+    .additional-right-content-faqs p {
+        margin-top: 0px;
+
+
+
+        /* Adjust the width as needed */
+    }
+
+    .additional-right-content-faqs h2 {
+        font-weight: 700;
+        letter-spacing: -0.7px;
+        display: inline-block;
+    }
+
+    .additional-section-faqs .additional-content-wrapper-faqs {
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: left;
+        /* Align text to the left */
+        line-height: 1.4;
+        display: block;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+
+    .right-content img {
+        display: none;
+    }
+
+    .content-wrapper {
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.2;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+
+}

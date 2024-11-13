@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pickatable</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to any external font -->
+    <!--     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Puffin+Display+Soft:wght@700&display=swap">
+ -->
+    <link rel="stylesheet" href="Font/Puffin-Display-SoftBlk.otf">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<div class="header-container">
+    <div class="container">
+
+        <header class="site-header">
+
+            <a href="index.html" class="logo">
+                <img class="svg" src="logo.svg" alt="pickatable">
+            </a>
+
+
+            <div class="button-container">
+
+                <div class="dropdown-menu">
+                    <!--  <button class="header-button">
+                        <a href="index.html" class="header-button"><span class="puffin-font">pickatable</span></a>
+                    </button> -->
+                    <button class="header-button"><!-- Inside your main HTML file -->
+                        <a href="contact_us.html" class="header-button">Contact Us</a>
+                    </button>
+
+                </div>
+                <!--           <button class="header-button">T&Cs</button>
+          <button class="header-button">Restaurant Owner?</button> -->
+
+
+                <div class="hamburger-icon">&#9776;</div>
+            </div>
+        </header>
+
+    </div>
+
+
+</div>
+<main class="main-content">
+
+    <div class="background-image-faqs">
+        <div class="content-overlay">
+            <div class="content-wrapper">
+                <div class="left-content">
+                    <h1>Frequently Asked Questions</h1>
+
+
+                </div>
+                <div class="right-content">
+                    <img src="IMGs/iPhone-2.png" alt="iPhone">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+</main>
+<section class="additional-section-faqs">
+    <div class="additional-content-wrapper-faqs">
+
+        <!-- Content for the additional section -->
+
+        <div class="additional-right-content-faqs">
+
+
+
+            <h2>
+                What is <span class="puffin-font">pickatable</span>?
+            </h2>
+            <p>
+                <span class="puffin-font">pickatable</span> is a
+                restaurant discovery
+                platform offering a <span style="font-weight: bold;">50% off on food</span> on a table
+                reservation for two, three or four people. The perfect solution for food lovers to explore
+                something new.
+            </p>
+
+
+
+            <h2>
+                How does it work?
+            </h2>
+            <p>Easy. <span style="font-weight: bold;">Download the App</span> and search
+                for a restaurant you want to try out. Select one
+                of the available slots of the early tables and reserve it for €8 . That's it!
+            </p>
+
+
+            <h2>
+                What about the drinks?
+            </h2>
+            <p>
+                Our deal is firmly 50% off on food only, drinks are <span style="font-weight: bold;">always
+                    full price</span>.
+            </p>
+
+
+            <h2>
+                What if we are more than four people?
+            </h2>
+            <p>It's great to be together, and we're working on increasing the number of diners
+                but
+                for the time being, the maximum number of guests per table reservation is four, with only
+                one
+                table per group.
+                <br><br>Adding extra tables unfortunately is not permitted.<br>But hey, stay tuned for more
+                information!
+            </p>
+
+
+            <h2>
+                How do restaurants benefit?
+            </h2>
+            <p>
+                <span class="puffin-font">pickatable</span>
+                is a
+                win-win
+                solution for customers and restaurants alike. We
+                encourage customers to be the first to reserve a table during a generally quiet period of
+                the
+                day.
+            </p>
+
+
+            <h2>
+                What if I'm late?
+            </h2>
+            <p>
+                Because no one likes latecomers, the deal is no longer valid if you arrive more
+                than
+                15 minutes late. This keeps things fair for both diners and restaurants.
+            </p>
+
+
+
+            <h2>What is the policy over public holidays?</h2>
+            <p>Restaurants are entitled to choose days and times for "table picking".
+                Availability
+                on public holidays is entirely on them and isn't therefore guaranteed, but there's always
+                hope
+                in the universe.
+            </p>
+
+
+
+        </div>
+        <div class="additional-left-content-faqs">
+            <img src="IMGs/iPhone-grp.png" alt="iPhone">
+        </div>
+
+    </div>
+</section>
+<div class="footer-container">
+    <footer class="site-footer">
+        <!-- <div class="partner-logos">Proud Partner with...</div> -->
+        <!-- <img src="IMGs/shsf.svg" alt="stamp"> -->
+        <div class="follow-us">
+            <a href="https://www.instagram.com/pickatable.fi/" target="_blank">
+                <img src="IMGs/ig.svg" alt="Instagram">
+            </a>
+            <a href="https://www.instagram.com/pickatable.fi/" target="_blank">
+                <p>follow us</p>
+            </a>
+
+
+        </div>
+
+
+        <div class="copyright">
+            <p>
+                Ⓒ pickatable 2024
+            </p>
+        </div>
+</div>
+<script>
+    // JavaScript to toggle visibility
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+
+    hamburgerIcon.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('show');
+    });
+</script>
+<script>
+    document.addEventListener('click', function (event) {
+        var dropdownMenu = document.querySelector('.dropdown-menu');
+        var buttonContainer = document.querySelector('.button-container');
+
+        // Check if the clicked element is outside the dropdown menu and button container
+        if (!dropdownMenu.contains(event.target) && !buttonContainer.contains(event.target)) {
+            // If outside, deactivate the buttons (close the dropdown menu)
+            dropdownMenu.classList.remove('show');
+        }
+    });
+</script>
+
+<body>
+    <!-- Your FAQs content goes here -->
+</body>
+
+</html>
