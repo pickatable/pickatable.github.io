@@ -1,1 +1,6 @@
-{"app_name":"restaurant_viewer","version":"1.0.0","build_number":"1","package_name":"restaurant_viewer"}
+{
+    "app_name": "restaurant_viewer",
+    "version": "1.0.0",
+    "build_number": "1",
+    "package_name": "restaurant_viewer"
+}

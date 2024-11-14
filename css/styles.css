@@ -1,16 +1,12 @@
 @font-face {
     font-family: "Puffin";
     font-weight: bold;
-    src: url('Font/Puffin-Display-SoftBlk.otf');
+    src: url('../assets/fonts/Puffin-Display-SoftBlk.otf');
 }
 
 body {
     margin: 0;
     padding: 0;
-
-
-
-
 }
 
 /* body {
@@ -23,11 +19,6 @@ body {
     /* Centers the container horizontally */
     /* Other styles for the container */
 }
-
-
-
-
-
 
 .site-header {
     max-width: 1140px;
@@ -60,15 +51,11 @@ body {
 }
 
 .header-container {
-
     z-index: 3;
     background-color: white;
     border-bottom: solid 1px #dbdbdb;
-
     /* Other styles for the header container */
 }
-
-
 
 img.svg {
     width: 120px;
@@ -98,10 +85,8 @@ img.svg {
     cursor: pointer;
     /* Show pointer cursor on hover */
     transition: all 0.3s ease;
-
     /* Smooth transition */
 }
-
 
 .store {
     margin: 10px 0;
@@ -109,7 +94,6 @@ img.svg {
     padding-left: 30px;
     display: inline-block;
     margin-left: 0px;
-
     justify-content: center;
 }
 
@@ -121,8 +105,6 @@ img.svg {
 
 }
 
-
-
 .header-button:active {
     transform: translateY(3px);
     /* Move the button slightly down on click */
@@ -131,8 +113,6 @@ img.svg {
 
 .header-button:hover {
     color: #5387C4;
-
-
     /* Underline on hover */
     /* Additional styles on hover if needed */
 }
@@ -151,23 +131,15 @@ img.svg {
     /* Remove default underline */
     background-color: #365880;
     color: #fff;
-
 }
-
-
-
 
 .main-content {
     position: relative;
-
     height: 640px;
     overflow: hidden;
-
 }
 
 /* Scrolling Logos */
-
-
 .logos-container {
     /*  border-top: solid #dbdbdb 1px; */
     background-color: #365880;
@@ -180,54 +152,29 @@ img.svg {
 .scrolling-logos {
     height: auto;
     display: flex;
-
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     background-color: #365880;
-
-
-
 }
 
 /* Ensure it's on top of the background */
 
-
-
-
 .scrolling-logos img {
-
     max-width: 100%;
     height: 35px;
-
     margin-right: 20px;
     margin-left: 20px;
     margin: 30px;
     display: block;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Set the image as a background for main-content */
 .background-image {
     position: relative;
-    background-image: url('img_1.jpg');
+    background-image: url('../assets/images/img_1.jpg');
     background-size: cover;
     background-position: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +185,6 @@ img.svg {
     left: 0;
     width: 100%;
     height: 100%;
-
     /* Text color */
     /* Other styles for the background image */
 }
@@ -256,7 +202,6 @@ img.svg {
     /* Ensure it's on top of the background image */
 }
 
-
 .content-overlay {
     position: absolute;
     top: 50%;
@@ -267,7 +212,6 @@ img.svg {
     /* Center align the content */
     /* Other styles for content overlay */
 }
-
 
 .right-content {
     max-width: 1140px;
@@ -289,17 +233,11 @@ img.svg {
     height: auto;
     /* Allows the height to adjust proportionally */
     width: 100%;
-
 }
-
-
-
 
 .content-overlay h1 {
     font-size: 2.5rem;
     letter-spacing: -1.68px;
-
-
     /* Other styles for the heading */
 }
 
@@ -307,8 +245,6 @@ img.svg {
     font-size: 1.2rem;
     /* Other styles for the paragraph */
 }
-
-
 
 .content-overlay h1,
 .content-overlay p {
@@ -319,7 +255,6 @@ img.svg {
     text-align: left;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-
 }
 
 .content-wrapper {
@@ -330,23 +265,16 @@ img.svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .left-content {
     text-align: left;
 }
 
-
-
-
 .left-content h1 {
     margin-bottom: 10px;
     /* Add margin as needed */
 }
-
-
-
 
 .additional-section .additional-content-wrapper {
 
@@ -679,8 +607,6 @@ img.svg {
 
 }
 
-
-
 .puffin-font {
     font-family: puffin, sans-serif;
     font-weight: 900;
@@ -788,7 +714,6 @@ img.svg {
 }
 
 .logos {
-
     overflow: hidden;
     padding: 60px 0;
     white-space: nowrap;
@@ -817,7 +742,7 @@ img.svg {
 
 /* .logos:hover .logos-slide {
     animation-play-state: paused;
-  } */
+} */
 
 .logos-slide {
     display: inline-block;

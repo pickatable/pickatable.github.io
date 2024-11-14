@@ -1,1 +1,9 @@
-*.DS_Store
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files (macOS, Windows)
+.DS_Store
+Thumbs.db
