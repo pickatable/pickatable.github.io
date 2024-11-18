@@ -11,14 +11,13 @@ const loadHeader = async () => {
 };
 
 function initializeMenu() {
-    const hamburger = document.getElementById('hamburger-menu');
-    const dropdownMenu = document.getElementById('dropdown-menu');
+    const hamburger = document.getElementById('header-dropdown-icon');
+    const dropdownMenu = document.getElementById('header-dropdown-menu');
 
     hamburger.addEventListener('click', function() {
         dropdownMenu.classList.toggle('visible');
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
         if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
             dropdownMenu.classList.remove('visible');

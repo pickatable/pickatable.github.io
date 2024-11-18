@@ -811,60 +811,6 @@ img.svg {
         cursor: pointer;
     }
 
-    .dropdown-menu.show {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #365880;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #ff0000;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 150px;
-        margin: 5px;
-        padding: 5px;
-        /* Set the width as needed */
-        border-radius: 10px;
-        /* Add this line for rounded corners */
-        z-index: 5;
-    }
-
-    .dropdown-menu a {
-        padding: 10px;
-        text-align: center;
-        color: #365880;
-        text-decoration: none;
-        font-size: 14px;
-        transition: background-color 0.3s ease;
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #ff0000;
-        /* Add a background color on hover */
-    }
-
-    .dropdown-menu.visible {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        /* Adjust the top position as needed */
-        right: 0px;
-        background-color: #ff0000;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 150px;
-        border-radius: 5px;
-        /* Set the width as needed */
-    }
-
 
 
 
