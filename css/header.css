@@ -40,6 +40,30 @@ body {
     display: none;
     font-size: 24px;
 }
+.header-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    border-radius: 10px;
+    z-index: 5;
+}
+.header-dropdown-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #1C1C1C;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.header-dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+.header-dropdown-menu.visible {
+    display: block;
+}
 .header-logo-icon {
     display: block;
     margin-top: 6px;
@@ -83,29 +107,4 @@ body {
     .header-action-button {
         margin-left: auto;
     }
-}
-
-.header-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    border-radius: 10px;
-    z-index: 5;
-}
-.header-dropdown-menu a {
-    display: block;
-    padding: 15px 20px;
-    color: #1C1C1C;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-.header-dropdown-menu a:hover {
-    background-color: #f5f5f5;
-}
-.header-dropdown-menu.visible {
-    display: block;
 }
