@@ -20,27 +20,6 @@ body {
     /* Other styles for the container */
 }
 
-.site-header {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 60px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.hamburger-icon {
-    font-size: 20px;
-    /* Adjust the size as needed */
-    cursor: pointer;
-    display: none;
-    /* Initially hide the hamburger icon */
-}
-
 .button-container {
     /* Set a max-width and position to keep it within the 1140px limit */
     max-width: calc(100% - 200px);
@@ -50,42 +29,12 @@ body {
     /* Other styles for the button container */
 }
 
-.header-container {
-    z-index: 3;
-    background-color: white;
-    border-bottom: solid 1px #dbdbdb;
-    /* Other styles for the header container */
-}
-
 img.svg {
     width: 120px;
     /* Set the desired width */
     height: auto;
     /* Allow the height to adjust proportionally */
     padding-top: 7px;
-}
-
-.header-button {
-    font-family: 'Poppins', sans-serif;
-    /* Apply Poppins font */
-    font-weight: 600;
-    /* Extra bold */
-    font-size: 14px;
-    /* Adjust font size */
-    color: #365880;
-    /* Text color */
-    background-color: #ffffff;
-    /* Background color */
-    border: none;
-    /* Remove border */
-    padding: 10px 20px;
-    /* Adjust padding */
-    text-decoration: none;
-    /* Remove default underline */
-    cursor: pointer;
-    /* Show pointer cursor on hover */
-    transition: all 0.3s ease;
-    /* Smooth transition */
 }
 
 .store {
@@ -103,34 +52,6 @@ img.svg {
     margin-right: 8px;
     justify-content: center;
 
-}
-
-.header-button:active {
-    transform: translateY(3px);
-    /* Move the button slightly down on click */
-    /* You can apply other styles/animations as desired */
-}
-
-.header-button:hover {
-    color: #5387C4;
-    /* Underline on hover */
-    /* Additional styles on hover if needed */
-}
-
-.header-button:nth-child(4) {
-    background-color: #fff;
-    color: #ff4331;
-    border-radius: 5px;
-    /* Apply styles specifically to the fourth button (Restaurant Owner) */
-    /* Adjust styles such as color, background, padding, etc. */
-}
-
-.header-button:nth-child(4):hover {
-    /* Other styles for hover effect */
-    text-decoration: none;
-    /* Remove default underline */
-    background-color: #365880;
-    color: #fff;
 }
 
 .main-content {
@@ -502,34 +423,6 @@ img.svg {
 }
 
 
-
-.site-footer {
-
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 20px;
-    /* Adjust padding as needed */
-    background-color: #365880;
-    /* Match the background color of other sections */
-    display: block;
-}
-
-.site-footer img {
-    height: 300px;
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center-align items horizontally */
-    justify-content: center;
-    height: 350px;
-    /*  border-top: solid #dbdbdb 1px; */
-    background-color: #365880;
-}
-
-
 .follow-us {
     margin-top: 30px;
     display: flex;
@@ -757,30 +650,12 @@ img.svg {
 /* Add similar styles for main content and footer */
 @media only screen and (max-width: 768px) {
 
-
-
-
-    .header-container {
-
-        z-index: 3;
-        background-color: rgb(255, 255, 255);
-        border-bottom: solid 1px #dbdbdb;
-
-        /* Other styles for the header container */
-    }
-
     .container {
         max-width: 1140px;
         margin: 0 auto;
         background-color: #ffffff;
         /* Centers the container horizontally */
         /* Other styles for the container */
-    }
-
-    .site-header {
-        padding-left: 15px;
-        padding-right: 15px;
-        background-color: #5388c400;
     }
 
     .button-container.show {
@@ -793,22 +668,6 @@ img.svg {
     .button-container {
         max-width: 100%;
         position: relative;
-    }
-
-    .header-button {
-        border-radius: 5px;
-
-    }
-
-    .header-button:nth-child(2) {
-        margin-top: 5px;
-    }
-
-    .hamburger-icon {
-        display: block;
-        color: #365880;
-        margin: 0px;
-        cursor: pointer;
     }
 
 
@@ -845,21 +704,6 @@ img.svg {
     .additional-left-content,
     .additional-right-content {
         width: 100%;
-    }
-
-    .site-footer {
-
-
-        margin: 0 auto;
-        padding: 0px;
-        /* Adjust padding as needed */
-        background-color: #365880;
-        /* Match the background color of other sections */
-        display: block;
-    }
-
-    .footer-container {
-        height: auto;
     }
 
     .follow-us {
@@ -1019,18 +863,6 @@ img.svg {
 
     .logos-container {
         padding-top: 40px;
-        border: 0px;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Center-align items horizontally */
-        justify-content: center;
-        height: 200px;
-        /*  border-top: solid #dbdbdb 1px; */
-        background-color: #365880;
         border: 0px;
     }
 
