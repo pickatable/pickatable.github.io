@@ -1,35 +1,27 @@
 const loadHeader = async () => {
-    const headerContainer = document.getElementById('header-container');
-    
     try {
         const response = await fetch('components/header.html');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
-        const headerContent = await response.text();
-        headerContainer.innerHTML = headerContent;
-        
-        // Initialize menu functionality
+        if (!response.ok) throw new Error('Failed to load header');
+        const header = await response.text();
+        document.getElementById('header').innerHTML = header;
         initializeMenu();
     } catch (error) {
         console.error('Error loading header:', error);
-        headerContainer.innerHTML = '<p>Error loading header</p>';
     }
 };
 
 function initializeMenu() {
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const hamburger = document.getElementById('hamburger-menu');
+    const dropdownMenu = document.getElementById('dropdown-menu');
 
-    hamburgerIcon.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('show');
+    hamburger.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('visible');
     });
 
+    // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-        const buttonContainer = document.querySelector('.button-container');
-
-        if (!dropdownMenu.contains(event.target) && !buttonContainer.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
+        if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('visible');
         }
     });
 }

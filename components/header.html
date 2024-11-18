@@ -4,32 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pickatable - Contact Us</title>
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../assets/fonts/Puffin-Display-SoftBlk.otf" as="font" type="font/otf" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" as="style">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
-<header id="header-container">
-    <div class="header-container">
-        <div class="container">
-            <header class="site-header">
-                <a href="../index.html" class="logo">
-                    <img class="svg" src="../assets/images/logo.svg" alt="pickatable">
+<body>
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="header-left-container">
+                <div class="header-hamburger-icon" id="hamburger-menu">&#9776;</div>
+                <a href="../index.html">
+                    <img class="header-logo-icon" src="../assets/icons/logo_black.png" alt="pickatable">
                 </a>
-                <div class="button-container">
-                    <div class="dropdown-menu">
-                      <button class="header-button">
-                        <a href="../contact_us.html" class="header-button">Contact Us</a>
-                      </button>
-                      <button class="header-button">
-                        <a href="../faqs.html" class="header-button">FAQs</a>
-                      </button>
-                    </div>
-                    <div class="hamburger-icon">&#9776;</div>
+                <div class="header-links-container">
+                    <a class="header-navigation-link" href="../contact_us.html">About us</a>
+                    <a class="header-navigation-link" href="../faqs.html">FAQs</a>
                 </div>
-            </header>
-        </div>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="../contact_us.html">About us</a>
+                <a href="../faqs.html">FAQs</a>
+                <a href="../restaurant_viewer.html">For restaurants</a>
+            </div>
+            <div class="header-right-container">
+                <a class="header-restaurant-button" href="../restaurant_viewer.html">For restaurants</a>
+                <a class="header-action-button" href="../link_redirect.html">Get the app</a>
+            </div>
+        </header>
     </div>
-</header>
+</body>
+
+</html>
