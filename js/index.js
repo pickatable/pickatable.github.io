@@ -1,46 +1,58 @@
-// Analytics setup
 const setupAnalytics = () => {
-    window.amplitude.init('b7be85869a78669cddcda5e56b25c362');
-    window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
-    window.amplitude.add(window.amplitudeAutocapturePlugin.plugin());
-};
+    const AMPLITUDE_API_KEY = process.env.AMPLITUDE_API_KEY;
+    const SAMPLE_RATE = 1;
 
-// Counter increment
-const incrementCounter = async () => {
     try {
-        const response = await fetch('https://europe-west1-pickatable-ca962.cloudfunctions.net/incrementCounter');
-        if (!response.ok) {
-            throw new Error('Failed to increment counter');
-        }
-        console.log('Counter incremented successfully.');
+        window.amplitude.init(AMPLITUDE_API_KEY);
+        window.amplitude.add(window.sessionReplay.plugin({ sampleRate: SAMPLE_RATE }));
+        window.amplitude.add(window.amplitudeAutocapturePlugin.plugin());
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Failed to setup analytics:', error);
     }
 };
 
-// Load analytics scripts dynamically
+const incrementCounter = async () => {
+    const COUNTER_API_URL = 'https://europe-west1-pickatable-ca962.cloudfunctions.net/incrementCounter';
+    
+    try {
+        const response = await fetch(COUNTER_API_URL);
+        if (!response.ok) {
+            throw new Error(`Failed to increment counter: ${response.status} ${response.statusText}`);
+        }
+        console.log('Counter incremented successfully.');
+    } catch (error) {
+        console.error('Error incrementing counter:', error);
+        throw error;
+    }
+};
+
 const loadScript = (src) => {
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = src;
+        script.async = true;
         script.onload = resolve;
-        script.onerror = reject;
+        script.onerror = (error) => reject(new Error(`Failed to load script ${src}: ${error}`));
         document.body.appendChild(script);
     });
 };
 
-// Initialize everything
 const init = async () => {
+    const SCRIPT_URLS = {
+        analytics: 'https://cdn.amplitude.com/libs/analytics-browser-2.6.2-min.js.gz',
+        sessionReplay: 'https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz',
+        autocapture: 'https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz'
+    };
+
     try {
-        // Load analytics scripts
         await Promise.all([
-            loadScript('https://cdn.amplitude.com/libs/analytics-browser-2.6.2-min.js.gz'),
-            loadScript('https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz'),
-            loadScript('https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz')
+            loadScript(SCRIPT_URLS.analytics),
+            loadScript(SCRIPT_URLS.sessionReplay),
+            loadScript(SCRIPT_URLS.autocapture)
         ]);
 
         setupAnalytics();
-        incrementCounter();
+        await incrementCounter();
     } catch (error) {
         console.error('Failed to initialize:', error);
     }
