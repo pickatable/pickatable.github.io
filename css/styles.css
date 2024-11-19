@@ -93,7 +93,7 @@ img.svg {
 /* Set the image as a background for main-content */
 .background-image {
     position: relative;
-    background-image: url('../assets/images/img_1.jpg');
+    background-image: url('/assets/images/hero_background.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
