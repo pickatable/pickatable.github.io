@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/assets/fonts/fraunces.ttf');
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/assets/fonts/rubik.ttf');
+} 
+h1, h2 {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 600;
+}
+a {
+    color: #C9A66E;
+    text-decoration: none;
+}
+p {
+    font-family: 'Rubik', sans-serif;
+}
+@media screen and (max-width: 768px) {
+    .image {
+        display: none;
+    }
+}
+
+.page-title-container {
+    background-color: #1C1C1C; 
+    color: white; 
+    padding: 20px;
+}
+.page-title-container h1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.page-content-container {
+    display: flex;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+.inline-logo-icon {
+    height: 30px; 
+    width: 130px; 
+    margin-bottom: -13px;
+}

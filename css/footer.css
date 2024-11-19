@@ -56,6 +56,10 @@
 .footer p.footer-copyright {
     color: #B5B5B5;
 }
+.footer-instagram-icon {
+    width: 18px;
+    height: 18px;
+}
 
 @media screen and (max-width: 768px) {
     .footer {
