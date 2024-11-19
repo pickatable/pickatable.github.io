@@ -25,10 +25,9 @@ Note: Keep the Terminal window open while you're working on the site. To stop th
 ```
 website/
 ├── index.html              # Home page
-├── about.html         # About page
-├── faq.html               # FAQ page
-├── data.html               # ... page
-├── link_redirect.html      # ... page
+├── about.html              # About page
+├── faq.html                # FAQ page
+├── redirect.html           # Redirect page
 ├── restaurant_viewer.html  # Restaurant viewer page
 ├── assets/
 │   ├── documents/          # Document files
