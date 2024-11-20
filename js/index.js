@@ -5,7 +5,7 @@ const setupAnalytics = () => {
     }
 
     const AMPLITUDE_API_KEY = window.AMPLITUDE_API_KEY;
-    const SAMPLE_RATE = 1;
+    const SAMPLE_RATE = 0.1;
 
     try {
         window.amplitude.init(AMPLITUDE_API_KEY);
@@ -50,16 +50,19 @@ const init = async () => {
     };
 
     try {
-        try {
-            await Promise.all([
-                loadScript(SCRIPT_URLS.analytics),
-                loadScript(SCRIPT_URLS.sessionReplay),
-                loadScript(SCRIPT_URLS.autocapture)
-            ]);
-            setupAnalytics();
-        } catch (analyticsError) {
-            console.warn('Analytics disabled: Script loading failed', analyticsError);
-        }
+        // Load analytics in parallel but don't block page load
+        setTimeout(async () => {
+            try {
+                await Promise.all([
+                    loadScript(SCRIPT_URLS.analytics),
+                    loadScript(SCRIPT_URLS.sessionReplay),
+                    loadScript(SCRIPT_URLS.autocapture)
+                ]);
+                setupAnalytics();
+            } catch (analyticsError) {
+                console.warn('Analytics disabled: Script loading failed', analyticsError);
+            }
+        }, 2000);
 
         await incrementCounter();
     } catch (error) {
