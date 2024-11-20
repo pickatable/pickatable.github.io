@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'Fraunces';
     src: url('/assets/fonts/fraunces.ttf');
@@ -5,24 +6,171 @@
 @font-face {
     font-family: 'Rubik';
     src: url('/assets/fonts/rubik.ttf');
-} 
-h1, h2 {
+}
+
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Fraunces', sans-serif;
     font-weight: 600;
+}
+p {
+    font-family: 'Rubik', sans-serif;
 }
 a {
     color: #C9A66E;
     text-decoration: none;
 }
-p {
+
+/* Header */
+.header {
+    background-color: white;
+    color: #1C1C1C;
     font-family: 'Rubik', sans-serif;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
-@media screen and (max-width: 768px) {
-    .image {
-        display: none;
-    }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+.header-left-container {
+    display: flex;
+    align-items: center
+}
+.header-right-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-dropdown-icon {
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+.header-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    border-radius: 10px;
+    z-index: 5;
+}
+.header-dropdown-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #1C1C1C;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.header-dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+.header-dropdown-menu.visible {
+    display: block;
+}
+.header-logo-icon {
+    display: block;
+    margin-top: 6px;
+    height: 40px;
+    width: 173px;
+}
+.header-links-container {
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;
+}
+.header-links-container a {
+    color: #1C1C1C;
+    text-decoration: none;
+}
+.header-restaurant-button {
+    border: 2px solid #C9A66E;
+    border-radius: 10px;
+    color: #C9A66E;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.header-action-button {
+    background-color: #C9A66E;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
 }
 
+/* Footer */
+.footer {
+    background-color: #1C1C1C;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.footer p {
+    color: #C9A66E;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-right-container {
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo-icon {
+    height: 40px;
+    width: 173px;
+}
+.footer-badges-container {
+    display: flex;
+    gap: 10px;
+}
+.footer-badge-icon {
+    height: 45px;
+    width: 135px;
+}
+.footer-instagram-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.footer p.footer-copyright {
+    color: #B5B5B5;
+}
+.footer-instagram-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Pages */
 .page-title-container {
     background-color: #1C1C1C; 
     color: white; 
@@ -38,9 +186,49 @@ p {
     margin: 0 auto; 
     padding: 0 20px;
 }
-
+.page-text-container {
+    flex: 3;
+}
+.page-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 .inline-logo-icon {
-    height: 30px; 
-    width: 130px; 
+    height: 30px;
+    width: 130px;
     margin-bottom: -13px;
+}
+
+/* Changes for mobile */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header-dropdown-icon {
+        display: block;
+        margin-right: 5px;
+    }
+    .header-links-container {
+        display: none;
+    }
+    .header-restaurant-button {
+        display: none;
+    }
+    .header-action-button {
+        margin-left: auto;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .image {
+        display: none;
+    }
+    .page-image-container {
+        display: none;
+    }
 }
