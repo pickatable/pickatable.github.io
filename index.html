@@ -22,6 +22,79 @@
 <body>
   <header id="header"></header>
 
+  <div class="page-content-container" style="align-items: center;">
+    <div class="left-container">
+      <img class="page-image" src="/assets/images/app_screenshot_0.webp" alt="iPhone">
+    </div>
+    <div class="right-container">
+      <h1>Get 50% off food at early dinner reservations.</h1>
+      <div>
+        <a href=" https://apps.apple.com/fi/app/pickatable/id1663970460?l=fi">
+          <img class="home-badge-icon" src="/assets/icons/app_store.svg">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=fi.pickatable.app">
+          <img class="home-badge-icon" src="/assets/icons/play_store.svg">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="page-content-container" style="padding-top: 20px; padding-bottom: 20px; align-items: center;">
+    <div style="text-align: center;">
+      <h2>Food lover? Join the community.</h2>
+      <p><b>pickatable</b> allows you to try new restaurants with a <b>50% off on food</b> on early table reservations for two, three, or four people. <b>Always!</b></p>
+      <p>How does it work? <b>Easy</b>. Download the app and look for a restaurant you want to try.</p>
+      <p>Choose from the available early dinner slots and secure your reservation for just €8.</p>
+      <p>It is really that simple.</p>
+      <h2>Restaurant owner? We bring real people through your doors.</h2>
+      <p>Our platform empowers you to optimize <b>one</b> or <b>two</b> vacant early tables by granting <b>pickatable</b>'s community a truly unique benefit.</p>
+      <p>By offering 50% off the food bill to our community members you will gain new real customers, whom eventually spread positive word-of-mouth about the restaurants they try, <b>which leads to even more new customers</b>.</p>
+      <p>And the best part is, once you take a look at the numbers you will understand why <b>pickatable</b> is a genuine <b>win-win</b> solution for both restaurants and customers.</p>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+  
+  <script src="/js/footer.js" defer></script>
+  <script src="/js/index.js" defer></script>
+</body>
+
+<style>
+  .left-container {
+    flex: 1;
+  }
+  .right-container {
+    flex: 1;
+  }
+  .page-image {
+    width: 400px;
+    height: auto;
+  }
+
+  .page-content-container {
+    display: flex;
+    max-width: 1000px; 
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .page-content-container {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center; /* Optional: centers text on mobile */
+    }
+    .page-image {
+      width: 300px;
+      height: auto;
+    }
+    
+  }
+</style>
+
+</html>
+
+<!--
   <div class="home-hero-container">
     <div class="home-hero-content">
       <h1>Your best restaurant<br>discovery platform</h1>
@@ -37,7 +110,6 @@
     </div>
     <div class="logo-slider">
       <div class="logo-slide-track">
-        <!-- First set of images -->
         <img src="/assets/images/restaurant_logos/avgust.webp" alt="Avgust" loading="eager" decoding="async" width="150" height="50">
         <img src="/assets/images/restaurant_logos/locanda_scappi.webp" alt="Locanda Scappi" loading="lazy" decoding="async" width="150" height="50">
         <img src="/assets/images/restaurant_logos/pobre.webp" alt="Pobre" loading="lazy" decoding="async" width="150" height="50">
@@ -48,7 +120,6 @@
         <img src="/assets/images/restaurant_logos/tanner.webp" alt="Tanner" loading="lazy" decoding="async" width="150" height="50">
         <img src="/assets/images/restaurant_logos/the_cock.webp" alt="The Cock" loading="lazy" decoding="async" width="150" height="50">
         <img src="/assets/images/restaurant_logos/young_hearts.webp" alt="Young Hearts" loading="lazy" decoding="async" width="150" height="50">
-        <!-- Duplicate set for seamless loop -->
         <img src="/assets/images/restaurant_logos/avgust.webp" alt="Avgust" loading="lazy" decoding="async" width="150" height="50">
         <img src="/assets/images/restaurant_logos/locanda_scappi.webp" alt="Locanda Scappi" loading="lazy" decoding="async" width="150" height="50">
         <img src="/assets/images/restaurant_logos/pobre.webp" alt="Pobre" loading="lazy" decoding="async" width="150" height="50">
@@ -78,11 +149,4 @@
       <p>And the best part is, once you take a look at the numbers you will understand why <b>pickatable</b> is a genuine <b>win-win</b> solution for both restaurants and customers.</p>
     </div>
   </div>
-
-  <footer id="footer"></footer>
-  
-  <script src="/js/footer.js" defer></script>
-  <script src="/js/index.js" defer></script>
-</body>
-
-</html>
+-->
