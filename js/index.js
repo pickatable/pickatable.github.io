@@ -1,5 +1,10 @@
 const setupAnalytics = () => {
-    const AMPLITUDE_API_KEY = process.env.AMPLITUDE_API_KEY;
+    if (!window.amplitude) {
+        console.warn('Analytics disabled: Required scripts not loaded');
+        return;
+    }
+
+    const AMPLITUDE_API_KEY = window.AMPLITUDE_API_KEY;
     const SAMPLE_RATE = 1;
 
     try {
@@ -45,13 +50,17 @@ const init = async () => {
     };
 
     try {
-        await Promise.all([
-            loadScript(SCRIPT_URLS.analytics),
-            loadScript(SCRIPT_URLS.sessionReplay),
-            loadScript(SCRIPT_URLS.autocapture)
-        ]);
+        try {
+            await Promise.all([
+                loadScript(SCRIPT_URLS.analytics),
+                loadScript(SCRIPT_URLS.sessionReplay),
+                loadScript(SCRIPT_URLS.autocapture)
+            ]);
+            setupAnalytics();
+        } catch (analyticsError) {
+            console.warn('Analytics disabled: Script loading failed', analyticsError);
+        }
 
-        setupAnalytics();
         await incrementCounter();
     } catch (error) {
         console.error('Failed to initialize:', error);
