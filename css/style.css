@@ -13,6 +13,9 @@ body {
     margin: 0;
     padding: 0;
 }
+section h1 {
+    font-size: 2em;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fraunces', sans-serif;
     font-weight: 600;
@@ -171,67 +174,28 @@ a {
 }
 
 /* Home */
-.home-hero-container {
-    width: 100%;
-    height: 640px;
-    background-image: url(/assets/images/hero_background.webp);
-    color: white;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.home-hero-container::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 640px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-    z-index: 1;
-}
-.home-hero-container h1 {
-    margin-top: 0;
-}
-.home-hero-content {
+.home-first-section-container {
     max-width: 1000px;
-    margin-left: calc((100vw - 1000px) / 2);
-    z-index: 2;
+    margin: 0 auto;
     padding: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home-second-section-container {
+background-color: #C9A66E;
+
+align-items: center;
+text-align: center;
+}
+.home-app-image {
+width: 400px;
+height: 470px;
 }
 .home-badge-icon {
     height: 45px;
     width: 135px;
-}
-
-/* Logo slider */
-.logo-slider {
-    width: 100%;
-    overflow: hidden;
-    z-index: 2;
-    padding-bottom: 80px;
-}
-.logo-slide-track {
-    display: flex;
-    width: calc(150px * 20);
-    animation: scroll 30s linear infinite;
-    will-change: transform;
-}
-.logo-slide-track img {
-    height: 50px;
-    width: 150px;
-    padding: 0 20px;
-    object-fit: contain;
-}
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 /* Pages */
@@ -247,7 +211,7 @@ a {
 .page-content-container {
     display: flex;
     max-width: 1000px; 
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 0 20px;
 }
 .page-text-container {
@@ -286,15 +250,18 @@ a {
         flex-direction: column;
     }
 
+    /* Home */
+    .home-first-section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-app-image {
+        width: 300px;
+        height: 352px;
+    }
+
     /* Pages */
     .page-image-container {
         display: none;
-    }
-}
-
-/* For mobile screens */
-@media screen and (max-width: 768px) {
-    .home-hero-content {
-        margin-left: 0px;
     }
 }
